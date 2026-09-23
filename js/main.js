@@ -10,11 +10,11 @@ document.addEventListener("DOMContentLoaded", function () {
   inicializarCarruselPersonajes();
   inicializarGaleriaVisor();
   marcarPaginaActiva();
-  inicializarFormularioContacto(); // <-- Agregá esta llamada
+  inicializarFormularioContacto(); 
 });
  
 /* ------------------------------------------------------------
-   1. MENÚ MOBILE (hamburguesa)
+   1. MENÚ MOBILE 
    ------------------------------------------------------------ */
 function inicializarMenuMobile() {
   const botonMenu = document.getElementById("menu-toggle");
@@ -182,8 +182,7 @@ function inicializarCarruselPersonajes() {
   if (botonSiguiente) botonSiguiente.addEventListener("click", irSiguiente);
   if (botonAnterior) botonAnterior.addEventListener("click", irAnterior);
  
-  // Swipe (deslizar el dedo) para moverse entre personajes en mobile,
-  // igual que en el visor de galería.
+  // Swipe para moverse entre personajes en mobile
   const UMBRAL_SWIPE_PX = 40;
   let swipeInicioX = null;
   let swipeInicioY = null;
@@ -211,7 +210,7 @@ function inicializarCarruselPersonajes() {
       swipeInicioY = null;
  
       // Si el movimiento fue más vertical que horizontal, no es un
-      // swipe de navegación (puede ser scroll de la página).
+      // swipe de navegación
       if (Math.abs(deltaX) < UMBRAL_SWIPE_PX || Math.abs(deltaX) < Math.abs(deltaY)) {
         return;
       }
@@ -233,21 +232,19 @@ function inicializarCarruselPersonajes() {
   actualizarCarrusel(indiceActual);
 }
  
+
 /* ------------------------------------------------------------
-   4. VISOR DE GALERÍA (múltiples galerías por página)
-   ------------------------------------------------------------ */
-/* ------------------------------------------------------------
-   4. VISOR DE GALERÍA (soporta múltiples galerías independientes)
+   4. VISOR DE GALERÍA 
    ------------------------------------------------------------ */
 function inicializarGaleriaVisor() {
-  // Seleccionamos cada sección que contenga su propia galería y su propio visor
+
   const seccionesGaleria = document.querySelectorAll(".seccion");
  
   seccionesGaleria.forEach((seccion) => {
     const items = seccion.querySelectorAll(".galeria-grid [data-galeria-img]");
     const visor = seccion.querySelector(".galeria-visor");
  
-    // Si la sección no tiene elementos de galería o visor, avanzamos a la siguiente
+
     if (!items.length || !visor) return;
  
     const imgVisor = visor.querySelector(".galeria-visor-img");
@@ -284,8 +281,7 @@ async function entrarPantallaCompleta() {
         if (visor.requestFullscreen) await visor.requestFullscreen();
         else if (visor.webkitRequestFullscreen) visor.webkitRequestFullscreen();
       } catch (err) {
-        // Si el navegador no lo permite (ej. iOS Safari en un <div>),
-        // no pasa nada: el visor se sigue viendo grande en la página.
+
       }
     }
  
@@ -340,7 +336,7 @@ async function entrarPantallaCompleta() {
       mostrarPorIndice(indiceActual - 1);
     }
  
-    // Escuchamos clics ÚNICAMENTE en los elementos de esta sección
+
     seccion.addEventListener("click", function (evento) {
       const miniatura = evento.target.closest(".galeria-grid [data-galeria-img]");
       if (miniatura) {
@@ -370,9 +366,7 @@ async function entrarPantallaCompleta() {
       }
     });
  
-    // Swipe (deslizar el dedo): reemplaza a las flechas en mobile, donde
-    // están ocultas por CSS. Se banca tanto un swipe corto y rápido
-    // como uno lento pero largo.
+    // reemplaza a las flechas en mobile, están ocultas por CSS. 
     const UMBRAL_SWIPE_PX = 40;
     let swipeInicioX = null;
     let swipeInicioY = null;
@@ -402,7 +396,7 @@ async function entrarPantallaCompleta() {
         swipeInicioY = null;
  
         // Si el movimiento fue más vertical que horizontal, no es un
-        // swipe de navegación (puede ser scroll): lo ignoramos.
+        // swipe de navegación
         if (Math.abs(deltaX) < UMBRAL_SWIPE_PX || Math.abs(deltaX) < Math.abs(deltaY)) {
           return;
         }
@@ -412,7 +406,7 @@ async function entrarPantallaCompleta() {
       { passive: true }
     );
  
-    // Eventos de teclado asignados solo cuando el visor está abierto
+    // teclado solo cuando el visor está abierto
     document.addEventListener("keydown", function (evento) {
       if (visor.hidden) return;
       if (evento.key === "ArrowRight") siguiente();
@@ -427,7 +421,7 @@ async function entrarPantallaCompleta() {
 function marcarPaginaActiva() {
   let paginaActual = window.location.pathname.split("/").pop();
  
-  // Si la ruta termina en / (ej: http://sitio.com/), es el index
+
   if (paginaActual === "") {
     paginaActual = "index.html";
   }
@@ -445,7 +439,7 @@ function marcarPaginaActiva() {
     if (paginaActual === paginaEnlace) {
       enlace.classList.add("activo");
  
-      // Si el enlace está dentro del desplegable, marcamos también el botón del desplegable
+
       const dropdownPadre = enlace.closest(".nav-item--dropdown");
       if (dropdownPadre) {
         const botonDropdown = dropdownPadre.querySelector(".dropdown-toggle");
@@ -465,12 +459,12 @@ function inicializarFormularioContacto() {
   if (!formulario) return;
  
   formulario.addEventListener("submit", function (evento) {
-    evento.preventDefault(); // Evita la recarga de página y el error con '#'
+    evento.preventDefault(); 
  
-    // Acá podés procesar los datos o mostrar un mensaje de éxito
+
     alert("¡Gracias por tu mensaje! Nos pondremos en contacto pronto.");
  
-    // Limpia los campos del formulario
+
     formulario.reset();
   });
 }
