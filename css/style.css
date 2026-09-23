@@ -530,7 +530,7 @@ p{
   transform: scale(1.05);
 }
 /* ============================================================
-   6. TARJETAS DE VERSIONES (usadas en index y en /versiones)
+   6. TARJETAS DE VERSIONES 
    ============================================================ */
 .grid-versiones {
   display: grid;
@@ -684,7 +684,46 @@ p{
   }
 }
  
- 
+ @media (max-width: 420px) {
+  
+
+  .caja-texto-dorada {
+    padding: 16px !important;
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+
+  .caja-texto-dorada .titulo-seccion {
+    font-size: 1.5rem !important; 
+    margin-bottom: 12px;
+  }
+
+  .caja-texto-dorada p {
+    font-size: 0.95rem !important; 
+    line-height: 1.4;
+  }
+
+
+  .detalle-imagen {
+    padding: 12px !important;
+  }
+
+  .detalle-imagen p {
+    font-size: 0.9rem !important;
+  }
+
+  .detalle-version {
+    gap: 16px;
+    margin-bottom: 24px;
+    box-sizing: border-box;
+  }
+
+  .detalle-imagen .info-juego {
+    flex-direction: column; 
+    gap: 8px;
+  }
+}
  
  
 /* Caja de texto con fondo amarillo */
@@ -1096,6 +1135,46 @@ width: 100%;
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
     box-sizing: border-box;
+  }
+}
+
+@media (max-width: 420px) {
+
+  .carrusel-flecha {
+    display: none !important;
+  }
+
+
+  .carrusel {
+    padding: 0 !important;
+    gap: 0;
+    margin-top: 20px;
+  }
+
+
+  .avatar-personaje {
+    width: 110px;
+    height: 110px;
+    margin: 1.5rem auto 2.5rem;
+  }
+
+
+  .hero-titulo {
+    font-size: 1.8rem;
+  }
+
+  .tarjeta-personaje h3 {
+    font-size: 1.1rem;
+  }
+
+  .tarjeta-personaje .rol {
+    font-size: 0.75rem;
+  }
+
+  .tarjeta-personaje p.descripcion {
+    font-size: 0.85rem;
+    padding: 0 10px;
+    text-align: center; 
   }
 }
  
@@ -1515,12 +1594,7 @@ width: 100%;
 }
  
 /* ============================================================
-   12. RESPONSIVE - SISTEMA DE 4 BREAKPOINTS
-   ------------------------------------------------------------
-   480px  -> móviles grandes
-   768px  -> tablets (mismo corte que el menú hamburguesa)
-   1024px -> monitores chicos
-   1400px -> monitores grandes
+   12. RESPONSIVE 
    ============================================================ */
  
 /* --- Hasta 767px  --- */
@@ -1549,15 +1623,232 @@ width: 100%;
     grid-row: auto;
   }
 }
+
+@media (max-width: 420px) {
+
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+
+
+  .contenedor, 
+  .bloque-texto, 
+  .caja-texto-dorada, 
+  .caja-texto-personajes {
+    max-width: 100% !important;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+
+  .titulo-seccion, 
+  .caja-texto-personajes .titulo-seccion {
+    font-size: 1.1rem !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
+  }
+
+
+  .carrusel-contenedor,
+  .contenedor-personaje {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+
  
-/* --- Hasta 479px (móviles chicos) --- */
+  .boton-carrusel-izq,
+  .boton-carrusel-der,
+  .carrusel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .boton-carrusel-izq { left: 2px; }
+  .boton-carrusel-der { right: 2px; }
+
+  .caja-texto-personajes p,
+  .tarjeta-personaje p {
+    padding: 0 25px;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+}
+ 
+/* --- Hasta 479px --- */
 @media (max-width: 479px) {
   .mosaico-imagenes {
     gap: 16px;
   }
 }
+
+/* --- hasta 360px --- */
+
+@media (max-width: 360px) {
+  :root {
+    --alto-header: 64px;
+  }
+
+  .contenedor {
+    padding: 0 10px;
+  }
+
+  .titulo-seccion,
+  .tituloindex {
+    font-size: 1.5rem;
+  }
+
+  .caja-texto-personajes .titulo-seccion,
+  .caja-texto-dorada .titulo-seccion {
+    font-size: 1.6rem;
+  }
+
+  .bloque-texto,
+  .caja-texto-dorada,
+  .caja-texto-personajes {
+    padding: 1rem;
+  }
+
+  p,
+  .bloque-texto p,
+  .caja-texto-personajes p,
+  .caja-texto-dorada p {
+    font-size: 0.95rem;
+  }
+
+  .boton {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+
+  .logo {
+    width: 150px;
+    font-size: 16px;
+  }
+
+  .avatar-personaje {
+    width: 120px;
+    height: 120px;
+  }
+
+  .carrusel {
+    padding: 0 8px;
+  }
+
+  .grid-versiones {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 360px) {
+
+  html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+
+
+  .caja-texto-dorada,
+  .bloque-texto,
+  .grid-versiones,
+  .contenedor {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important; 
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+
+
+  p, h1, h2, h3, .caja-texto-dorada p {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+}
+}
+/* hasta 320 px */
+@media (max-width: 320px) {
+  :root {
+    --alto-header: 58px;
+  }
+
+  .contenedor {
+    padding: 0 8px;
+  }
+
+  .titulo-seccion,
+  .tituloindex {
+    font-size: 1.3rem;
+  }
+
+  .caja-texto-personajes .titulo-seccion,
+  .caja-texto-dorada .titulo-seccion {
+    font-size: 1.4rem;
+  }
+
+  .bloque-texto,
+  .caja-texto-dorada,
+  .caja-texto-personajes {
+    padding: 0.8rem;
+  }
+
+  p,
+  .bloque-texto p,
+  .caja-texto-personajes p,
+  .caja-texto-dorada p {
+    font-size: 0.88rem;
+  }
+
+  .boton {
+    padding: 8px 14px;
+    font-size: 0.78rem;
+    width: 100%;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .hero-titulo {
+    font-size: 1.8rem;
+  }
+
+  .avatar-personaje {
+    width: 100px;
+    height: 100px;
+  }
+
+  .tarjeta-personaje p.descripcion {
+    font-size: 0.85rem;
+  }
+
+  .galeria-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .redes-lista a {
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+}
  
-/* --- Desde 1400px (monitores grandes) --- */
+/* --- Desde 1400px  --- */
 @media (min-width: 1400px) {
   .tarjeta-personaje {
     flex: 0 0 25%;
