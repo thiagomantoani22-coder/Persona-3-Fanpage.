@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto | Persona 3</title>
+  <meta name="description" content="Ponete en contacto con el equipo de esta fanpage de Persona 3." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,217;1,217&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ======================= HEADER ======================= -->
+  <header class="site-header">
+    <div class="contenedor header-inner">
+      <a href="index.html" class="logo"><img src="CSS/img/P3LOGO-header.webp" alt="Logo Persona 3" class="header-logo"></a>
+
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li class="nav-item--dropdown">
+            <button class="dropdown-toggle" aria-expanded="false" aria-controls="menu-versiones">
+              Versiones
+              <svg class="chevron" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </button>
+            <ul class="dropdown-menu" id="menu-versiones">
+              <li><a href="versiones/persona-3.html">Persona 3</a></li>
+              <li><a href="versiones/persona-3-fes.html">Persona 3 FES</a></li>
+              <li><a href="versiones/persona-3-portable.html">Persona 3 Portable</a></li>
+              <li><a href="versiones/persona-3-reload.html">Persona 3 Reload</a></li>
+            </ul>
+          </li>
+          <li><a href="personajes.html" class="nav-link">Personajes</a></li>
+          <li><a href="galeria.html" class="nav-link">Galeria</a></li>
+          <li><a href="contacto.html" class="nav-link activo">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================= HERO CHICO ======================= -->
+    <section class="hero hero--chica">
+      <div class="hero-contenido">
+        <h1 class="hero-logo" style="font-size: clamp(2rem, 6vw, 3.5rem);">CONTACTO</h1>
+        <p class="hero-tagline">¿Tenés dudas, sugerencias o querés colaborar con la fanpage? Escribinos.</p>
+      </div>
+    </section>
+
+    <!-- ======================= FORMULARIO ======================= -->
+    <section class="seccion">
+      <div class="contenedor">
+
+        <!--
+          Este formulario todavía no envía datos a ningún servidor.
+          Para que funcione, agregá un atributo "action" con la URL
+          de tu backend o de un servicio como Formspree, y el
+          atributo "method" (por ejemplo method="POST").
+        -->
+        <form class="formulario-contacto" action="#" method="POST">
+          <div class="campo">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+          </div>
+
+          <div class="campo">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+          </div>
+
+          <div class="campo">
+            <label for="asunto">Asunto</label>
+            <input type="text" id="asunto" name="asunto" placeholder="¿Sobre qué querés hablar?" />
+          </div>
+
+          <div class="campo">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribí tu mensaje acá..." required></textarea>
+          </div>
+
+          <button type="submit" class="boton boton--dorado">Enviar mensaje</button>
+        </form>
+
+        <!-- Info de contacto adicional -->
+        <div class="info-contacto">
+          <div class="item">
+            <h4>Correo</h4>
+            <p>contacto@persona3-fanpage.com</p>
+          </div>
+          <div class="item">
+            <h4>Comunidad</h4>
+            <p>Sumate a nuestro Discord para hablar sobre la saga.</p>
+          </div>
+          <div class="item">
+            <h4>Redes</h4>
+            <p>Seguinos para novedades y contenido de fans.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+ <footer class="site-footer">
+    <div class="contenedor">
+      <div class="footer-top">
+        <div class="footer-marca">
+          <a href="index.html" class="logo"><img src="CSS/img/P3LOGO-header.webp" alt="Logo Persona 3" class="header-logo"></a>
+          <p>
+            Fanpage no oficial creada por fans para fans. No está afiliada
+            a ATLUS ni a SEGA.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="personajes.html">Personajes</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-redes">
+          <h4>Seguinos</h4>
+          <!-- Logos de redes: reemplazar los textos por íconos/logos reales -->
+          <div class="redes-lista">
+            <a href="https://www.instagram.com/atlus_west/?hl=es" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/Atlus_West" target="_blank" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.youtube.com/atlus" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <p class="footer-legales">
+        © 2026 Fanpage no oficial de Persona 3. Persona 3 y todos los
+        personajes relacionados son marcas registradas de ATLUS Co., Ltd.
+        Este sitio es un proyecto de fans sin fines de lucro.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

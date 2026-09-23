@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personajes | Persona 3</title>
+  <meta name="description" content="Conocé a los miembros de S.E.E.S. y al resto del elenco de Persona 3." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,217;1,217&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ======================= HEADER ======================= -->
+  <header class="site-header">
+    <div class="contenedor header-inner">
+      <a href="index.html" class="logo"><img src="CSS/img/P3LOGO-header.webp" alt="Logo Persona 3" class="header-logo"></a>
+
+      
+
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li><a href="index.html" class="nav-link">Inicio</a></li>
+          <li class="nav-item--dropdown">
+            <button class="dropdown-toggle" aria-expanded="false" aria-controls="menu-versiones">
+              Versiones
+              <svg class="chevron" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </button>
+            <ul class="dropdown-menu" id="menu-versiones">
+              <li><a href="versiones/persona-3.html">Persona 3</a></li>
+              <li><a href="versiones/persona-3-fes.html">Persona 3 FES</a></li>
+              <li><a href="versiones/persona-3-portable.html">Persona 3 Portable</a></li>
+              <li><a href="versiones/persona-3-reload.html">Persona 3 Reload</a></li>
+            </ul>
+          </li>
+          <!-- Link activo: estamos parados en esta página -->
+          <li><a href="personajes.html" class="nav-link activo">Personajes</a></li>
+          <li><a href="galeria.html" class="nav-link">Galeria</a></li>
+          <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================= HERO CHICO (foto de fondo + logo encima) ======================= -->
+    <section class="hero_personaje">
+      <div class="hero-contenido">
+        <h1 class="hero-titulo">Miembros de S.E.E.S.</h1>
+        
+        <div style="margin-top: 1px;">
+        </div>
+      </div>
+
+    </section>
+    <!-- ======================= CARRUSEL DE PERSONAJES ======================= -->
+   <section class="seccion">
+  <!-- 1. El título se queda adentro del contenedor para no desalinearse -->
+  <div class="contenedor">
+    <h2 class="titulo-seccion">Conoce a los miembros de la Specialized Extracurricular Execution Squad</h2>
+    <!--<p class="subtitulo-seccion">
+      Conoce a los miembros de la Specialized Extracurricular Execution Squad
+    </p>-->
+  </div> <!-- Cerramos el contenedor aquí -->
+
+  <!-- 2. El carrusel va AFUERA del contenedor para ocupar el 100% del ancho de pantalla -->
+  <div class="carrusel">
+    <!-- Flecha izquierda -->
+    <button class="carrusel-flecha" data-carrusel="anterior" aria-label="Personaje anterior">&#8592;</button>
+
+    <div class="carrusel-pista-wrapper">
+      <div class="carrusel-pista">
+
+        <article class="tarjeta-personaje">
+          <div class="avatar-personaje">
+            <div class="anillo-externo"></div>
+            <div class="anillo-interno"><img src="CSS/img/P3_Protag_Reload.webp" alt="Foto del protagonista de Persona 3" class="foto-protagonista"></div>
+          </div>
+          <h3>Protagonista</h3>
+          <span class="rol">Persona: Orfeo</span>
+          <p class="descripcion">
+            Un estudiante de segundo año que se traslada a la secundaria Gekkoukan en primavera. Tras despertar repentinamente 
+            sus poderes se une a SEES. Es el único capaz de invocar múltiples Personas.
+          </p>
+        </article>
+
+        <article class="tarjeta-personaje">
+          <div class="avatar-personaje">
+            <div class="anillo-externo"></div>
+            <div class="anillo-interno"><img src="CSS/img/P3REYukari.webp" alt="Foto de Yukari de Persona 3" class="foto-yukari"></div>
+          </div>
+          <h3>Yukari Takeba</h3>
+          <span class="rol">Persona: Io</span>
+          <p class="descripcion">
+            Compañera de clase del protagonista y miembro del equipo de tiro con arco de la escuela. Es popular por su personalidad alegre y su belleza, pero en el fondo posee un lado decidido y estoico.
+             Se unió a SEES antes que el protagonista. 
+          </p>
+        </article>
+
+        <article class="tarjeta-personaje">
+          <div class="avatar-personaje">
+            <div class="anillo-externo"></div>
+            <div class="anillo-interno"><img src="CSS/img/P3RE_junpei.webp" alt="Foto de Junpei de Persona 3" class="foto-junpei"></div>
+          </div>
+          <h3>Junpei Iori</h3>
+          <span class="rol">Persona: Hermes</span>
+          <p class="descripcion">
+            Despierta sus poderes de Persona poco después que el protagonista. 
+            Tiene una personalidad extrovertida y es bueno para animar 
+            el ambiente, pero suele dejarse llevar, para disgusto de Yukari.
+          </p>
+        </article>
+
+        <article class="tarjeta-personaje">
+          <div class="avatar-personaje">
+            <div class="anillo-externo"></div>
+            <div class="anillo-interno"><img src="CSS/img/Mitsuru_Kirijo_Reload.webp" alt="Foto de Mitsuru de Persona 3" class="foto-mitsuru"></div>
+          </div>
+          <h3>Mitsuru Kirijo</h3>
+          <span class="rol">Persona: Penthesilea</span>
+          <p class="descripcion">
+             Lider de S.E.E.S, heredera del Grupo Kirijo, capitana del equipo de esgrima y presidenta del consejo estudiantil.
+             Es una chica seria y trabajadora con una gran afición por la disciplina. 
+             Sin embargo, debido a su educación sobreprotectora, a veces puede estar un poco desconectada de la realidad.
+          </p>
+        </article>
+
+        <article class="tarjeta-personaje">
+          <div class="avatar-personaje">
+            <div class="anillo-externo"></div>
+            <div class="anillo-interno"><img src="CSS/img/Akihiko_Sanada_Reload.webp" alt="Foto de Akihiko de Persona 3" class="foto-akihiko"></div>
+          </div>
+          <h3>Akihiko Sanada</h3>
+          <span class="rol">Persona: Polydeuces</span>
+          <p class="descripcion">
+            Miembro fundador de SEES. Muy popular en la escuela, es el capitán del equipo de boxeo y sobresale tanto en 
+            los deportes como en los estudios. Normalmente tranquilo y sereno, también puede ser algo terco e inflexible en ocasiones.
+          </p>
+        </article>
+
+
+        <article class="tarjeta-personaje">
+          <div class="avatar-personaje">
+            <div class="anillo-externo"></div>
+            <div class="anillo-interno"><img src="CSS/img/Fuuka_Yamagishi_Reload.webp" alt="Foto de Fuuka de Persona 3" class="foto-fuuka"></div>
+          </div>
+          <h3>Fuuka Yamagishi</h3>
+          <span class="rol">Persona: Lucia</span>
+          <p class="descripcion">
+            Es una chica tranquila y humilde, pero a veces sufre acoso escolar 
+            debido a su timidez. Queda atrapada en la Hora Oscura y sus habilidades Persona se activan cuando SEES acude a su rescate.
+          </p>
+        </article>
+
+        <article class="tarjeta-personaje">
+          <div class="avatar-personaje">
+            <div class="anillo-externo"></div>
+            <div class="anillo-interno"><img src="CSS/img/P3RE_Aigis_art (1).webp" alt="Foto de Aigis de Persona 3" class="foto-aigis"></div>
+          </div>
+          <h3>Aigis</h3>
+          <span class="rol">Persona: Palladion</span>
+          <p class="descripcion">
+            Arma de supresión anti-sombras de séptima generación creada por humanos. Con forma humanoide y un corazón capaz de usar habilidades de Persona, se une a SEES. 
+            Parece sentir un cariño especial por el protagonista desde el principio.
+             Va despertando sus emociones humanas a medida que pasa tiempo con el grupo.
+          </p>
+        </article>
+
+        <article class="tarjeta-personaje">
+          <div class="avatar-personaje">
+            <div class="anillo-externo"></div>
+            <div class="anillo-interno"><img src="CSS/img/P3RE_Ken.webp" alt="Foto de Ken de Persona 3" class="foto-ken"></div>
+          </div>
+          <h3>Ken Amada</h3>
+          <span class="rol">Persona: Nemesis</span>
+          <p class="descripcion">
+            Es el único estudiante de primaria en SEES. Tras el fallecimiento de su madre en un accidente, se mudó a una residencia estudiantil en Iwatodai.
+             Una serie de eventos lo llevan a despertar sus habilidades Persona y unirse a SEES con sed de venganza. Si bien Ken intenta mostrarse educado y maduro, también tiene un lado infantil
+          </p>
+        </article>
+
+        <article class="tarjeta-personaje">
+          <div class="avatar-personaje">
+            <div class="anillo-externo"></div>
+            <div class="anillo-interno"><img src="CSS/img/P3RE_Koromaru.webp" alt="Foto de Koromaru de Persona 3" class="foto-koromaru"></div>
+          </div>
+          <h3>Koromaru</h3>
+          <span class="rol">Persona: Cerbero</span>
+          <p class="descripcion">
+            Tras perder a su amo, SEES lo acoge y lo convierte en miembro. Es extremadamente inteligente y leal.
+Gracias a su personalidad amigable y gentil, Koromaru se integra rápidamente al grupo. Parece tener una relación
+ especialmente cercana con Aigis y con Ken.
+          </p>
+        </article>
+
+        <article class="tarjeta-personaje">
+          <div class="avatar-personaje">
+            <div class="anillo-externo"></div>
+            <div class="anillo-interno"><img src="CSS/img/P3RE_Shinjiro.webp" alt="Foto de Shinjiro de Persona 3" class="foto-shinji"></div>
+          </div>
+          <h3>Shinjiro Aragaki</h3>
+          <span class="rol">Persona: Castor</span>
+          <p class="descripcion">
+            Uno de los miembros fundadores de SEES. Estuvo ausente del grupo durante dos años, pero regresa debido a ciertas circunstancias.
+             Bajo su apariencia taciturna y reservada se esconde un alma bondadosa y un excelente cocinero. Adora a los animales y consiente a Koromaru cuando nadie lo ve.
+          </p>
+        </article>
+
+      </div>
+    </div>
+
+    <!-- Flecha derecha -->
+    <button class="carrusel-flecha" data-carrusel="siguiente" aria-label="Personaje siguiente">&#8594;</button>
+  </div>
+
+  <!-- Indicadores fuera del contenedor para alineación uniforme -->
+  <div class="carrusel-indicadores"></div>
+</section>
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+<footer class="site-footer">
+    <div class="contenedor">
+      <div class="footer-top">
+        <div class="footer-marca">
+          <a href="index.html" class="logo"><img src="CSS/img/P3LOGO-header.webp" alt="Logo Persona 3" class="header-logo"></a>
+          <p>
+            Fanpage no oficial creada por fans para fans. No está afiliada
+            a ATLUS ni a SEGA.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navegación</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="personajes.html">Personajes</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-redes">
+          <h4>Seguinos</h4>
+          <!-- Logos de redes: reemplazar los textos por íconos/logos reales -->
+          <div class="redes-lista">
+            <a href="https://www.instagram.com/atlus_west/?hl=es" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com/Atlus_West" target="_blank" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.youtube.com/atlus" target="_blank" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <p class="footer-legales">
+        © 2026 Fanpage no oficial de Persona 3. Persona 3 y todos los
+        personajes relacionados son marcas registradas de ATLUS Co., Ltd.
+        Este sitio es un proyecto de fans sin fines de lucro.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
