@@ -1379,7 +1379,15 @@ width: 100%;
   color: var(--color-texto-tenue);
   font-size: 0.9rem;
 }
- 
+
+.boton--dorado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%; /* O el ancho que prefieras */
+}
+
 /* ============================================================
    9. FOOTER
    ============================================================ */
