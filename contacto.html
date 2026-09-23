@@ -65,60 +65,49 @@
       </div>
 
     </section>
-    <!-- ======================= FORMULARIO ======================= -->
-    <section class="seccion">
-      <div class="contenedor">
+<!-- ======================= FORMULARIO ======================= -->
+<section class="seccion">
+  <div class="contenedor">
 
-        <!--
-          Este formulario todavía no envía datos a ningún servidor.
-          Para que funcione, agregá un atributo "action" con la URL
-          de tu backend o de un servicio como Formspree, y el
-          atributo "method" (por ejemplo method="POST").
-        -->
-        <form class="formulario-contacto" action="#" method="POST">
-          <div class="campo">
-            <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
-          </div>
-
-          <div class="campo">
-            <label for="email">Correo electrónico</label>
-            <input type="email" id="email" name="email" placeholder="tu@email.com" required />
-          </div>
-
-          <div class="campo">
-            <label for="asunto">Asunto</label>
-            <input type="text" id="asunto" name="asunto" placeholder="¿Sobre qué querés hablar?" />
-          </div>
-
-          <div class="campo">
-            <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribí tu mensaje acá..." required></textarea>
-          </div>
-
-          <button type="submit" class="boton boton--dorado">Enviar mensaje</button>
-        </form>
-
-        <!-- Info de contacto adicional -->
-        <div class="info-contacto">
-          <div class="item">
-            <h4>Correo</h4>
-            <p>contacto@persona3-fanpage.com</p>
-          </div>
-          <div class="item">
-            <h4>Comunidad</h4>
-            <p>Sumate a nuestro Discord para hablar sobre la saga.</p>
-          </div>
-          <div class="item">
-            <h4>Redes</h4>
-            <p>Seguinos para novedades y contenido de fans.</p>
-          </div>
-        </div>
-
+    <!-- Formulario integrado con Formspree para envío de mails reales -->
+    <form class="formulario-contacto" action="https://formspree.io/f/xvkgrawa" method="POST">
+      <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
       </div>
-    </section>
-  </main>
 
+      <div class="campo">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+      </div>
+
+      <div class="campo">
+        <label for="asunto">Asunto</label>
+
+        <!-- Se usa _subject para que Formspree use esto como el asunto del mail recibido -->
+        <input type="text" id="asunto" name="_subject" placeholder="¿Sobre qué querés hablar?" />
+      </div>
+
+      <div class="campo">
+        <label for="mensaje">Mensaje</label>
+        <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribí tu mensaje acá..." required></textarea>
+      </div>
+
+      <button type="submit" class="boton boton--dorado">Enviar mensaje</button>
+    </form>
+
+    <!-- Info de contacto adicional -->
+    <div class="info-contacto">
+      <div class="item">
+        <h4>Correo</h4>
+        <p>contacto@persona3-fanpage.com</p>
+      </div>
+      
+      
+    </div>
+
+  </div>
+</section>
   <!-- ======================= FOOTER ======================= -->
  <footer class="site-footer">
     <div class="contenedor">

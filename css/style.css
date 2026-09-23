@@ -1425,6 +1425,7 @@ width: 100%;
   margin-bottom: 14px;
   text-transform: uppercase;
   letter-spacing: 1px;
+  
 }
  
 .footer-links ul li {
@@ -1435,10 +1436,18 @@ width: 100%;
   color: var(--color-dorado);
 }
  
+.footer-redes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .redes-lista {
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Espacio entre los iconos */
 }
  
 .redes-lista a {
