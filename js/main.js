@@ -260,27 +260,15 @@ function inicializarGaleriaVisor() {
       return document.fullscreenElement || document.webkitFullscreenElement || null;
     }
  
-    async function entrarPantallaCompleta() {
+async function entrarPantallaCompleta() {
       if (!mediaMobil.matches) return;
       try {
         if (visor.requestFullscreen) await visor.requestFullscreen();
         else if (visor.webkitRequestFullscreen) visor.webkitRequestFullscreen();
       } catch (err) {}
- 
-      try {
-        if (screen.orientation && screen.orientation.lock) {
-          await screen.orientation.lock("landscape");
-        }
-      } catch (err) {}
     }
  
     function salirPantallaCompleta() {
-      try {
-        if (screen.orientation && screen.orientation.unlock) {
-          screen.orientation.unlock();
-        }
-      } catch (err) {}
- 
       if (elementoFullscreenActual() === visor) {
         if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
         else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
